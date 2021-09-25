@@ -1,4 +1,45 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<ui-sidebar [entries]="sidebarEntries"></ui-sidebar>
+<section id="content">
+	<header>
+		<h1><span>Current url: </span>{{ __currentUrl }}</h1>
+		<div class="paragraphs">
+			<p><span>|</span>    Angular sidebar with <span>nested route</span> styling ✨</p>
+			<p>Source code available on
+				<a
+					href="https://github.com/christianflemmer/ng-sidebar"
+					target="_blank"
+				>
+					GitHub
+				</a>
+				    |    
+				Hosted on
+				<a
+					href="https://www.netlify.com/"
+					target="_blank"
+				>
+					Netlify
+				</a>
+			</p>
+		</div>
+		<div class="paragraphs">
+			<p><span>|</span>    Built with Angular 12, FontAwesome and raw SCSS 💅🏽</p>
+			<p>Carefully tailored by
+				<a
+					href="https://www.christian-flemmer.com"
+					target="_blank"
+				>
+					Christian Flemmer
+				</a>
+			</p>
+		</div>
+	</header>
+	<div class="overlay">
+		<div class="overlay-helper">
+			<div class="overlay-element top-left"></div>
+			<div class="overlay-element top-right"></div>
+			<div class="overlay-element bottom-left"></div>
+			<div class="overlay-element bottom-right"></div>
+		</div>
+	</div>
+	<router-outlet></router-outlet>
+</section>
